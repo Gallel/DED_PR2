@@ -73,7 +73,7 @@ The model `Organization` stores the activities that the organizations organize, 
 
 In a similar way, the model `Activity` contains the ratings of that activity in a linked list and the tickets created for that activity. So this model has to be capable to insert ratings and enqueue and dequeue tickets to the queue of them.
 
-Finally, the orders works depending on its type: order as an individual user or order as a group. According to that, the project has the abstract class Order and the subclasses OrderUser and OrderGroup to represent that scenario. This situation can be checked in the UML of this project too. The orders share some attributes like the id, the date or the list of tickets, nevertheless, an order executed by a user only has to have the pointer to that user and an order executed by a group has to have the pointer to that group. For that reason, this implementation needs an abstract class and two differents classes for the orders.
+Finally, the orders works depending on its type: order as an individual user or order as a group. According to that, the project has the abstract class `Order` and the subclasses `OrderUser` and `OrderGroup` to represent that scenario. This situation can be checked in the UML of this project too. The orders share some attributes like the id, the date or the list of tickets, nevertheless, an order executed by a user only has to have the pointer to that user and an order executed by a group has to have the pointer to that group. For that reason, this implementation needs an abstract class and two differents classes for the orders.
 
 To sum up, all the models that have structure inside of them, have their own methods to manage that attribute according to the principle of infomation encapsulation.
 
