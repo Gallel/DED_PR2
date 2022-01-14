@@ -1,4 +1,4 @@
-# Disseny d'estructura de dades PR2
+﻿# Disseny d'estructura de dades PR2
 
 ### Author
 [Carles Gallel Soler](http://www.gallel.com/)
@@ -10,52 +10,53 @@
 The project has two differenced parts: the source of the code in the folder `src` and the tests in the folder `tests`. The first of them follow the following structure:
 
     .
-    +-- exceptions										# Exception files
-    �   +-- ActivityNotFoundException.java				# When an activity cannot be found
-    �   +-- DEDException.java							# All exceptions extends this
-    �   +-- GroupNotFoundException.java					# When a group cannot be found
-    �   +-- LimitExceededException.java					# When an activity reach the limit of seats
-    �   +-- NoActivitiesException.java					# When a container does not have any activity
-    �   +-- NoOrganizationException						# When an organization cannot be found
-    �   +-- NoRatingsException.java						# When a container does not have any rating
-    �   +-- NoRecordsException.java						# When a container does not have any record
-    �   +-- NoUserException.java						# When a user cannot be found
-    �   +-- NoWorkersException.java						# When a worker cannot be found
-    �   +-- OrderNotFoundException.java					# When an order cannot be found
-    �   +-- OrganizationNotFoundException.java			# When an organization cannot be found
-    �   +-- UserNotFoundException.java					# When a user cannot be found
-    �   +-- UserNotInActivityException.java				# When a user is not in a specific activity
-    +-- model											# Models of the project
-    �   +-- Activity.java								# Activity
-    �   +-- Group.java									# Group
-    �   +-- Order.java									# Abstract order
-    �   +-- OrderGroup.java								# Order by a group
-    �   +-- OrderUser.java								# Order by a user
-    �   +-- Organization.java							# Organization
-    �   +-- Rating.java									# Rating
-    �   +-- Record.java									# Record
-    �   +-- Role.java									# Role
-    �   +-- Ticket.java									# Ticket
-    �   +-- User.java									# User
-    �   +-- Worker.java									# Worker
-    +-- util											# Utilities
-    �   +-- DiccionarioOrderedVector.java				# Ordered dictionary vector with limit of elements
-    �   +-- LocalDateUtils.java							# Local date utility functions
-    �   +-- OrderedVector.java							# Ordered vector with no limit elements
-    +-- SafetyActivities4Covid19.java					# ADT interface
-    +-- SafetyActivities4Covid19Impl.java				# ADT implementation
+    ├── exceptions										# Exception files
+    │   ├── ActivityNotFoundException.java				# When an activity cannot be found
+    │   ├── DEDException.java							# All exceptions extends this
+    │   ├── GroupNotFoundException.java					# When a group cannot be found
+    │   ├── LimitExceededException.java					# When an activity reach the limit of seats
+    │   ├── NoActivitiesException.java					# When a container does not have any activity
+    │   ├── NoOrganizationException						# When an organization cannot be found
+    │   ├── NoRatingsException.java						# When a container does not have any rating
+    │   ├── NoRecordsException.java						# When a container does not have any record
+    │   ├── NoUserException.java						# When a user cannot be found
+    │   ├── NoWorkersException.java						# When a worker cannot be found
+    │   ├── OrderNotFoundException.java					# When an order cannot be found
+    │   ├── OrganizationNotFoundException.java			# When an organization cannot be found
+    │   ├── UserNotFoundException.java					# When a user cannot be found
+    │   └── UserNotInActivityException.java				# When a user is not in a specific activity
+    ├── model											# Models of the project
+    │   ├── Activity.java								# Activity
+    │   ├── Group.java									# Group
+    │   ├── Order.java									# Abstract order
+    │   ├── OrderGroup.java								# Order by a group
+    │   ├── OrderUser.java								# Order by a user
+    │   ├── Organization.java							# Organization
+    │   ├── Rating.java									# Rating
+    │   ├── Record.java									# Record
+    │   ├── Role.java									# Role
+    │   ├── Ticket.java									# Ticket
+    │   ├── User.java									# User
+    │   └── Worker.java									# Worker
+    ├── util											# Utilities
+    │   ├── DiccionarioOrderedVector.java				# Ordered dictionary vector with limit of elements
+    │   ├── LocalDateUtils.java							# Local date utility functions
+    │   └── OrderedVector.java							# Ordered vector with no limit elements
+    ├── SafetyActivities4Covid19.java					# ADT interface
+    └── SafetyActivities4Covid19Impl.java				# ADT implementation
+
 
 The second one, the tests, have the following files:
 
     .
-    +-- utils											# Utilities
-    �   +-- DateUtils.java								# Datetime creator
-    +-- SafetyActivities4Covid19PR.java					# Super class for the tests
-    +-- FactorySafetyActivities4Covid19.java			# Factory of the ADT
-    +-- SafetyActivities4Covid19PR1Test.java			# PR1 main ADT tests
-    +-- SafetyActivities4Covid19PR1TestExtended.java	# PR1 extended ADT tests
-    +-- SafetyActivities4Covid19PR2Test.java			# PR2 main ADT tests
-    +-- SafetyActivities4Covid19PR2TestExtended.java	# PR2 extended ADT tests
+    ├── utils											# Utilities
+    │   └── DateUtils.java								# Datetime creator
+    ├── SafetyActivities4Covid19PR.java					# Super class for the tests
+    ├── FactorySafetyActivities4Covid19.java			# Factory of the ADT
+    ├── SafetyActivities4Covid19PR1Test.java			# PR1 main ADT tests
+    ├── SafetyActivities4Covid19PR1TestExtended.java	# PR1 extended ADT tests
+    ├── SafetyActivities4Covid19PR2Test.java			# PR2 main ADT tests
+    └── SafetyActivities4Covid19PR2TestExtended.java	# PR2 extended ADT tests
 
 ### Personalized ADT
 The project contains two personalized ADT: an ordered vector and an ordered dictionary vector defined in the following files respectively `OrderedVector.java` and `DiccionarioOrderedVector.java`. Both of them didn't exist in the library of this subject, so the project has to define them as a new ADT. The ordered vector has been used to store the best activities of all the system ordered by its rating. The second one has been used for the cultural activities using the id of that activity as a key.
